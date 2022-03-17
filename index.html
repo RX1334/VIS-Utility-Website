@@ -1,0 +1,87 @@
+<html>
+  <head>
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.4.1/lib/p5.js"></script>
+    <script src="sketch.js"></script>
+
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=DM+Serif+Display">
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=DM+Sans">
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=DM+Serif+Text">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <main>
+      <div class="canvas">
+        <div class="container">
+          <div class="container-lvl2" id="site_description">
+            <h1> VIS Utility Website </h1>
+            <p>This website provides utility functions for the VIS Department
+            as well as for Ryan's VIS Thesis Show. The following sections will
+            provide descriptions and instructions on the various functionalities.</p>
+          </div>
+
+          <div class="container-lvl2" id="logo_download">
+            <h2> VIS Logo Download </h2>
+            <p>Each time the logo is downloaded, the logo itself deteriorates a
+            little bit. So don't download it too much, I suppose. Also keep in mind
+            that past versions are not saved, use with discretion. The current
+            version is displayed below.</p>
+
+            <img src="images/Block Version.jpg">
+            <a> Download Block Version </a>
+            <img src="images/Text Version.jpg">
+            <a> Download Text Version </a>
+          </div>
+
+          <div class="container-lvl2" id="book_cover">
+            <h2> RX Book Cover Generation </h2>
+            <p>Enter the Timestamp, select a category, and paste in the contents
+            of the thought, idea, or prayer that needs a book cover to get a
+            generated book cover. The most recently generated book cover is shown
+            below.</p>
+            <form id="book_form">
+              <label for="Timestamp">Time Submitted: *</label><br>
+              <input type="datetime-local" id="Timestamp" name="Timestamp" required="required"><br>
+
+              <label for="Category">Choose a Category: *</label>
+              <select name="Categories" id="Category" required="required">
+                <option value="Nanum">Nanum Myeongjo</option>
+                <option value="IBM">IBM Plex</option>
+                <option value="Vollkorn">Vollkorn</option>
+                <option value="Frank_Ruhl_Libre">Frank Ruhl Libre</option>
+                <option value="DM_Serif">DM Serif Display</option>
+              </select>
+
+              <label for="Content">Content *</label>
+              <textarea id="Content" name="Content" required="required"></textarea>
+
+              <input type="submit" value="Generate Book Cover">
+            </form>
+
+            <script>
+              let data;
+              book_form.addEventListener("submit", function(e) {
+                e.preventDefault();
+                data = new FormData(book_form);
+                for (const [name,value] of data) {
+                  console.log(name,value)
+                }
+              })
+            </script>
+          </div>
+
+          <div class="container-lvl2" id="logo_download">
+            <h2> VTone Image Processor </h2>
+            <p> After uploading an image and choosing an reference image for
+            color matching. The output will have film grain and color matching
+            or histogram equalization applied. </p>
+          </div>
+        </div>
+      </div>
+
+
+    </main>
+  </body>
+</html>
