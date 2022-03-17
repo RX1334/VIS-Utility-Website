@@ -1,7 +1,7 @@
 <html>
   <head>
     <script src="https://cdn.jsdelivr.net/npm/p5@1.4.1/lib/p5.js"></script>
-    <script src="sketch.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/camanjs/4.0.0/caman.full.min.js"></script>
 
     <link rel="stylesheet"
           href="https://fonts.googleapis.com/css?family=DM+Serif+Display">
@@ -74,14 +74,25 @@
 
           <div class="container-lvl2" id="logo_download">
             <h2> VTone Image Processor </h2>
-            <p> After uploading an image and choosing an reference image for
-            color matching. The output will have film grain and color matching
-            or histogram equalization applied. </p>
+            <p> After uploading an image, the site will return an image with
+            exposure 10, vibrance 20, and noise 10 filters applied. Wait for
+            the second result image to render before downloading. </p>
+            <form id="vtone_form">
+              <label for="image_input">Upload your Image here *</label>
+              <input type="file" id="image_input" accept="image/jpg, image/png">
+              <label for="display_image">Uploaded Image Preview </label>
+              <div id="display_image"></div>
+              <canvas id="canvas"></canvas>
+              <p id="status"> Please upload an image, you will see the processing status here </p>
+              <label for="editted_image">Processed Image </label>
+              <div id="editted_image"></div>
+              <button type="button" id="download_btn"> Download Image </button>
+            </form>
           </div>
         </div>
       </div>
 
-
+      <script src="app.js"></script>
     </main>
   </body>
 </html>

@@ -88,6 +88,21 @@ input[type=submit] {
     border-radius: 4px;
 }
 
+button {
+  font-family: 'DM Sans';
+  font-size: 14px;
+  line-height: 18px;
+
+  width: 100%;
+  padding: 16px 20px;
+  background: #222;
+  color: #fff;
+
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
 textarea {
   font-family: 'DM Sans';
   font-size: 14px;
@@ -109,6 +124,16 @@ textarea {
 
 option {
   padding: 12px 20px;
+}
+
+canvas {
+  margin-top: 12px;
+  margin-bottom: 24px;
+  border-radius: 4px;
+
+  width: 0px;
+  height: 0px;
+  overflow: hidden;
 }
 
 .canvas {
@@ -148,4 +173,24 @@ option {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+}
+
+#display_image{
+   width: 600px;
+   height: 480px;
+   margin-top: 8px;
+   border-radius: 4px;
+   background-position: center;
+   background-size: cover;
+   margin-bottom: 24px;
+}
+
+#editted_image{
+   width: 600px;
+   height: 480px;
+   margin-top: 8px;
+   border-radius: 4px;
+   background-position: center;
+   background-size: cover;
+   margin-bottom: 24px;
 }
