@@ -26,7 +26,7 @@ image_input.addEventListener("change", function(){
       document.getElementById('canvas').removeAttribute("data-caman-id");
 
       Caman('#canvas', img, function () {
-        this.noise(10);
+        this.noise(20);
         this.vibrance(20);
         this.exposure(10);
         this.render(function() {

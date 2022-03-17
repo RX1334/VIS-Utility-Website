@@ -57,19 +57,12 @@
               <label for="Content">Content *</label>
               <textarea id="Content" name="Content" required="required"></textarea>
 
-              <input type="submit" value="Generate Book Cover">
+              <button type="button" id="book_button" value="Generate Book Cover">
             </form>
 
-            <script>
-              let data;
-              book_form.addEventListener("submit", function(e) {
-                e.preventDefault();
-                data = new FormData(book_form);
-                for (const [name,value] of data) {
-                  console.log(name,value)
-                }
-              })
-            </script>
+            <p> Hit the submit button to generate your
+
+            <script src="book_cover.js"> </script>
           </div>
 
           <div class="container-lvl2" id="logo_download">
@@ -88,11 +81,13 @@
               <div id="editted_image"></div>
               <button type="button" id="download_btn"> Download Image </button>
             </form>
+
+            <script src="vtone.js"></script>
           </div>
         </div>
       </div>
 
-      <script src="app.js"></script>
+
     </main>
   </body>
 </html>
