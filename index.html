@@ -1,7 +1,14 @@
 <html>
   <head>
-    <script src="https://cdn.jsdelivr.net/npm/p5@1.4.1/lib/p5.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.4.1/lib/p5.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/camanjs/4.0.0/caman.full.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"
+    integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/seedrandom/3.0.5/seedrandom.min.js">
+    </script>
 
     <link rel="stylesheet"
           href="https://fonts.googleapis.com/css?family=DM+Serif+Display">
@@ -17,9 +24,14 @@
         <div class="container">
           <div class="container-lvl2" id="site_description">
             <h1> VIS Utility Website </h1>
-            <p>This website provides utility functions for the VIS Department
+            <p style="margin-bottom: 24px;">
+            This website provides utility functions for the VIS Department
             as well as for Ryan's VIS Thesis Show. The following sections will
             provide descriptions and instructions on the various functionalities.</p>
+
+            <div id="clock"></div>
+            <script src="clock.js"></script>
+
           </div>
 
           <div class="container-lvl2" id="logo_download">
@@ -54,13 +66,17 @@
                 <option value="DM_Serif">DM Serif Display</option>
               </select>
 
-              <label for="Content">Content *</label>
+              <!-- <label for="Content">Content *</label>
               <textarea id="Content" name="Content" required="required"></textarea>
+              -->
 
-              <button type="button" id="book_button" value="Generate Book Cover">
+              <button type="button" onclick="generateCover();" id="book_button">
+                Generate Book Cover </button>
             </form>
 
-            <p> Hit the submit button to generate your
+            <p> Hit the submit button to generate your book cover </p>
+
+            <div id="cover"></div>
 
             <script src="book_cover.js"> </script>
           </div>
