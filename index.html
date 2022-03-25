@@ -66,9 +66,8 @@
                 <option value="DM_Serif">DM Serif Display</option>
               </select>
 
-              <!-- <label for="Content">Content *</label>
-              <textarea id="Content" name="Content" required="required"></textarea>
-              -->
+              <label for="BookName">File Name *</label>
+              <input type="text" id="bookName" name="BookName" required="required"></input>
 
               <button type="button" onclick="generateCover();" id="book_button">
                 Generate Book Cover </button>
@@ -77,6 +76,8 @@
             <p> Hit the submit button to generate your book cover </p>
 
             <div id="cover"></div>
+
+            <div id="backCover"></div>
 
             <script src="book_cover.js"> </script>
           </div>
